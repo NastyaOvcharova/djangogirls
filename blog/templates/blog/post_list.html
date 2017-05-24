@@ -1,13 +1,22 @@
- {% extends 'blog/base.html' %}
-
-    {% block content %}
-        {% for post in posts %}
+  {% load staticfiles %}
+ <html>
+        <head>
+            <title>Django Girls blog</title>
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+			<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        </head>
+        <body>
             <div class="post">
-                <div class="date">
-                    {{ post.published_date }}
-                </div>
-               <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaksbr }}</p>
+             <input id="checkBox" type="checkbox" name="subscribe">
+			 <label for="subscribeNews">Математика</label>
             </div>
-        {% endfor %}
-    {% endblock content %}
+            <div>
+              <input id="checkBox" type="checkbox" name="subscribe">
+			 <label for="subscribeNews">Математика</label>
+            </div>
+			<div>
+			<button>OK</button>
+			</div>
+        </body>
+    </html>
