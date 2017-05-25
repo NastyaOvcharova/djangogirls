@@ -8,6 +8,7 @@
 	.page-header {
         background-color: #ff9400;
         margin-top: 0;
+		width: 100%;
         padding: 20px 20px 20px 40px;
     }
 

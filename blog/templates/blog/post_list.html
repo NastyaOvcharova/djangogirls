@@ -1,22 +1,35 @@
   {% load staticfiles %}
  <html>
         <head>
+		<meta charset="utf-8">
             <title>Django Girls blog</title>
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 			<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+			<script src="jangogirls.js"></script>
         </head>
         <body>
-            <div class="post">
-             <input id="checkBox" type="checkbox" name="subscribe">
+		<div class="page-header">	
+		</div>	
+			<form id="frm1">
+             <input id="checkBox" type="checkbox" name="Математика">
 			 <label for="subscribeNews">Математика</label>
-            </div>
-            <div>
-              <input id="checkBox" type="checkbox" name="subscribe">
-			 <label for="subscribeNews">Математика</label>
-            </div>
-			<div>
-			<button>OK</button>
-			</div>
-        </body>
+			</form>
+             <input id="checkBox1" type="checkbox" name="Українська мова та література">
+			 <label for="subscribeNews">Українська мова та література</label><br>
+			 <input id="checkBox1" type="checkbox" name="Істория України">
+			 <label for="subscribeNews">Істория України</label><br>
+			 <input id="checkBox1" type="checkbox" name="Біологиія">
+			 <label for="subscribeNews">Біологія</label><br>
+			 <input id="checkBox1" type="checkbox" name="ГеограФія">
+			 <label for="subscribeNews">Гографія</label><br>
+			 <input id="checkBox1" type="checkbox" name="Хімія">
+			 <label for="subscribeNews">Хімія</label><br>
+			 <input id="checkBox1" type="checkbox" name="Фізика">
+			 <label for="subscribeNews">Фізика</label><br>
+			 <input id="checkBox1" type="checkbox" name="Англійська мова">
+			 <label for="subscribeNews">Англійська мова</label><br>
+			<button onclick="fun1()">OK</button>
+       
+		</body>
     </html>
