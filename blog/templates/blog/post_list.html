@@ -1,35 +1,52 @@
   {% load staticfiles %}
- <html>
+<html>
         <head>
 		<meta charset="utf-8">
             <title>Django Girls blog</title>
+			<script src="Brython-3.3.2/brython.js"></script>
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 			<link rel="stylesheet" href="{% static 'css/blog.css' %}">
-			<script src="jangogirls.js"></script>
         </head>
-        <body>
-		<div class="page-header">	
+       <body onload="brython()">
+	   <script type="text/python">
+from browser import document, alert
+
+def echo(ev):
+    alert(document["zone"].value)
+
+document['mybutton'].bind('click',echo)
+		</script>
+		<div class="page-header">
+		<h1 class="h1">Оберіть предмети, які ви складали!</h1>	
 		</div>	
-			<form id="frm1">
+			<form class="frm1">
              <input id="checkBox" type="checkbox" name="Математика">
-			 <label for="subscribeNews">Математика</label>
-			</form>
+			 <label for="subscribeNews">Математика</label><br><br>
              <input id="checkBox1" type="checkbox" name="Українська мова та література">
-			 <label for="subscribeNews">Українська мова та література</label><br>
+			 <label for="subscribeNews">Українська мова та література</label><br><br>
 			 <input id="checkBox1" type="checkbox" name="Істория України">
-			 <label for="subscribeNews">Істория України</label><br>
+			 <label for="subscribeNews">Історія України</label><br><br>
 			 <input id="checkBox1" type="checkbox" name="Біологиія">
-			 <label for="subscribeNews">Біологія</label><br>
+			 <label for="subscribeNews">Біологія</label><br><br>
+			 </form>
+			 <form class="frm2">
 			 <input id="checkBox1" type="checkbox" name="ГеограФія">
-			 <label for="subscribeNews">Гографія</label><br>
+			 <label for="subscribeNews">Географія</label><br><br>
 			 <input id="checkBox1" type="checkbox" name="Хімія">
-			 <label for="subscribeNews">Хімія</label><br>
+			 <label for="subscribeNews">Хімія</label><br><br>
 			 <input id="checkBox1" type="checkbox" name="Фізика">
-			 <label for="subscribeNews">Фізика</label><br>
+			 <label for="subscribeNews">Фізика</label><br><br>
 			 <input id="checkBox1" type="checkbox" name="Англійська мова">
-			 <label for="subscribeNews">Англійська мова</label><br>
-			<button onclick="fun1()">OK</button>
-       
+			 <label for="subscribeNews">Англійська мова</label><br><br>
+			 </form>
+			 <input id="zone"><button id="mybutton">click !</button>
+			<form >
+			<button class="frm3">OK</button>
+			
+       </form>
+	   <input class="frm4" TYPE=image src="http://testportal.gov.ua//wp-content/uploads/2016/07/Untitled-design-6-768x514.jpg"> </input>
 		</body>
     </html>
+  
+ 
